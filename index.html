@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+
+<!-- Este código muestra un texto inicial y el título principal de lo que sería el objetivo del proyecto -->
+<header>
+    <h1 id="title">Neighborhood Survey</h1>
+    <p id="description">Thank you for taking the time to answer this survey</p>
+</header>
+
+<!-- Está parte da formato a los campos que queremos que el usuario diligencie al momento de la interacción -->
+<body>
+    <main>
+        <form id="survey-form">             
+            <!-- Este primer fieldset es para que el usuario diligencie los datos de información básica requerida -->
+            <fieldset>
+                <label id="name-label" for="name">
+                    <p class="category">Names</p>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </label>
+                    
+                <label id="email-label" for="email">
+                    <p class="category">Email</p>
+                    <input type="email" name="email" id="email" placeholder="Enter your email adress" required>
+                </label>
+
+                <label id="number-label" for="number">
+                    <p class="category">Age (Optional)</p>
+                    <input type="number" id="number" min="14" max="99" placeholder="Age" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend><p class="context">Please select an option about the property where you live</p></legend>
+                <label for="lease"><input id="lease" type="radio" name="property-type" class="inline" value="lease" checked /><p class="options">Lease</p></label>
+                <label for="own"><input id="own" type="radio" name="property-type" class="inline" value="own"><p class="options">Own</p></label>
+            </fieldset>
+
+            <fieldset>
+                <legend><p class="context">Now, select your location from the list below</p></legend>
+                <label for="dropdown">
+                    <select name="dropdown" id="dropdown">
+                        <option value="">Select one option</option>
+                        <option value="usaquen">Usaquen</option>
+                        <option value="chapinero">Chapinero</option>
+                        <option value="santa-Fe">Santa Fe</option>
+                        <option value="san-Cristobal">San Cristóbal</option>
+                        <option value="usme">Usme</option>
+                        <option value="tunjuelito">Tunjuelito</option>
+                        <option value="bosa">Bosa</option>
+                        <option value="kennedy">Kennedy</option>
+                        <option value="fontibon">Fontibón</option>
+                        <option value="engativa">Engativá</option>
+                        <option value="suba">Suba</option>
+                        <option value="barrios-Unidos">Barrios Unidos</option>
+                        <option value="teusaquillo">Teusaquillo</option>
+                        <option value="los-Martires">Los Mártires</option>
+                        <option value="antonio-Narino">Antonio Nariño</option>
+                        <option value="puente-Aranda">Puente Aranda</option>
+                        <option value="la-Candelaria">La Candelaria</option>
+                        <option value="rafael-Uribe">Rafael Uribe Uribe</option>
+                        <option value="ciudad-Bolivar">Ciudad Bolívar</option>
+                        <option value="sumapaz">Sumapaz</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend><p class="context">Who do you live with in your home?</p></legend>
+                <label for="mother"><input id="mother" type="checkbox" name="roomates" value="mother" checked><p class="options">Mother</p></label>
+                <label for="father"><input id="father" type="checkbox" name="roomates" value="father"><p class="options" >Father</p></label>
+                <label for="brothers"><input id="brothers" type="checkbox" name="roomates" value="brothers"><p class="options">Brothers</p></label>
+                <label for="grandparents"><input id="grandparents" type="checkbox" name="roomates" value="grandparents"><p class="options">Grandparents</p></label>
+                <label for="other"><input id="other" type="checkbox" name="roomates" value="others"><p class="options">Other</p></label>
+            </fieldset>
+
+            <fieldset>
+                <label for="aditional-information">
+                    <legend><p class="information">Enter additional information you consider necessary</p></legend>
+                    <textarea name="aditional-information" id="aditional-information" cols="5" rows="10" placeholder="In my neighborhood there is..."></textarea>
+                </label>
+            </fieldset>
+
+            <input type="submit" value="Submit" id="submit"/>
+
+        </form>
+    </main>
+</body>
+</html>
